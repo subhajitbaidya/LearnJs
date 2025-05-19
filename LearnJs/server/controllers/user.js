@@ -2,7 +2,6 @@ const User = require("../models/user.js");
 
 async function handleUserLogin(req, res) {
   const { email, password } = req.body;
-  console.log(req.body);
   if (!email || !password) return res.status(400).json("login error");
 
   const available = await User.findOne({ email });
