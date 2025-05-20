@@ -10,6 +10,7 @@ document.getElementById("form").addEventListener("submit", async (e) => {
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: "include", // include cookies
     body: JSON.stringify({ email, password }),
   });
   const data = await response.json();
